@@ -7,7 +7,6 @@
 	$flag = "true";
 	$file = fopen("./assets/data/pre_user.csv", "a");
 	fwrite($file, "$email,$token,$flag\n");
-	fwrite($bkfile, "$email,$token,$flag\n");
 	fclose($file);
 
 	header("Location: contactform.php");

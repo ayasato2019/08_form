@@ -12,7 +12,7 @@
 		<h2 class="title" data-heading="registran">ユーザ一覧</h2>
 		<?php
 			// userlist.csvファイルを開く
-			$file = fopen('./assets/data/userlist.csv', 'r');
+			$file = fopen('./assets/data/pre_user.csv', 'r');
 			
 			if ($file) {
 				echo "<ul class='read-user-list'>";
@@ -21,14 +21,6 @@
 				while (($line = fgetcsv($file)) !== false) {
 					$email = htmlspecialchars($line[0]);
 					$token = htmlspecialchars($line[1]);
-					$flag = isset($line[2]) ? htmlspecialchars($line[2]) : 'false'; // デフォルトは'false'
-
-					// 本登録の状態をチェック
-					if ($flag == 'true') {
-						echo "<h2>本登録済み</h2>";
-					} else {
-						echo "<h2>本登録未達成</h2>";
-					}
 
 					// ユーザ情報を表示
 					echo "<li>";
