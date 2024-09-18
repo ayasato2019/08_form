@@ -63,3 +63,26 @@ input {
 .submit-button:hover {
 	opacity: .4;
 }
+
+/*-----------------
+	read.php
+------------------*/
+.read-user-list {
+	list-style: "";
+	padding-inline-start: 0px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.read-user-list li {
+	margin-bottom: 16px;
+}
+
+.user-label {
+	font-weight: bold;
+}
+
+.user-label::after {
+	content: ":";
+	padding-right: 8px;
+}
